@@ -27,11 +27,14 @@ module.exports = {
     ],
     parserOptions: {
         ecmaVersion: 12,
+        project: "<tsconfigRootDir>/tsconfig.json",
+        tsconfigRootDir: "<tsconfigRootDir>",
         sourceType: "module",
         ecmaFeatures: {
             jsx: true,
         },
         project: ["./tsconfig.json"],
+        include: ["src/**/*.ts", "src/**/*.tsx"],
     },
     ignorePatterns: [".eslintrc.js", "jest.config.js"],
     rules: {

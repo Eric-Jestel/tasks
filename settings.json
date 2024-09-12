@@ -3,6 +3,7 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+      "eslint.workingDirectories": ["src" ],
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true
 }

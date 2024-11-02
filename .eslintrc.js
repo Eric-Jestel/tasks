@@ -27,11 +27,14 @@ module.exports = {
     ],
     parserOptions: {
         ecmaVersion: 12,
+        project: "<tsconfigRootDir>/tsconfig.json",
+        tsconfigRootDir: "<tsconfigRootDir>",
         sourceType: "module",
         ecmaFeatures: {
             jsx: true,
         },
         project: ["./tsconfig.json"],
+        include: ["src/**/*.ts", "src/**/*.tsx"],
     },
     ignorePatterns: [".eslintrc.js", "jest.config.js"],
     rules: {
@@ -96,4 +99,7 @@ module.exports = {
         // Disallow conditionals where the type is always truthy or always falsy.
         "@typescript-eslint/no-unnecessary-condition": "error",
     },
+    parserOptions: {
+   project: 'tsconfig.json',
+   tsconfigRootDir: __dirname}
 };
